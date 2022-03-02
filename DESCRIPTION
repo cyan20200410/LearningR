@@ -8,3 +8,6 @@ Imports:
 Encoding: UTF-8
 URL: https://github.com/cyan20200410/LearningR
 BugReports: https://github.com/cyan20200410/LearningR/issues
+Depends: 
+    R (>= 2.10)
+LazyData: true
