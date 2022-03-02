@@ -41,4 +41,12 @@ nhanes_modified
   nhanes_small %>%
       summarise(max_bmi = max(bmi, na.rm = TRUE))
 
+  nhanes_small %>%
+      # Recall ! means "NOT", so !is.na means "is not missing"
+      filter(!is.na(diabetes)) %>%
+      group_by(diabetes, phys_active) %>%
+      summarise(mean_age = mean(age, na.rm = TRUE),
+                mean_bmi = mean(bmi, na.rm = TRUE)) %>%
+ ungroup()
+
 

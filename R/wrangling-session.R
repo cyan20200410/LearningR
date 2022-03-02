@@ -120,3 +120,9 @@ nhanes_small %>%
 
 nhanes_small %>%
     mutate(old = if_else(age >= 30, "Yes", "No")) %>% view()
+
+
+
+
+
+
