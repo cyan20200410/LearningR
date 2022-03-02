@@ -6,6 +6,8 @@ TODO: Give a brief description of what your project is about
 
 This project is about how to learning R and git well.
 
+Making changes
+
 # Brief description of folder and file contents
 
 TODO: As project evolves, add brief description of what is inside the data, doc and R folders.
