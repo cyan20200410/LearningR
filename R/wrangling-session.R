@@ -67,7 +67,56 @@ nhanes_small %>%
     rename(bp_systolic = bp_sys_ave)
 
 
+# filter the rows
+nhanes_small %>%
+    filter(phys_active=="No")
+
+nhanes_small %>%
+    filter(phys_active !="No")
+
+# participate who have a BMI equal to 25
+nhanes_small %>%
+    filter(bmi == 25)
+
+# participate who have a BMI equal or more than 25
+nhanes_small %>%
+    filter(bmi >= 25)
+
+# When BMI is 25 and phys_activ is no
+nhanes_small %>%
+    filter(bmi == 25 & phys_active=="No")
+
+# when bmi is 25 or phys_activ is no
+nhanes_small %>%
+    filter(bmi == 25 | phys_active=="No")
+
+#  arranging data by age in assending order
+nhanes_small %>%
+    arrange(age)
+
+nhanes_small %>%
+    arrange(education)
+
+nhanes_small %>%
+    arrange(desc(age))
+
+# Arrange data by education and then age in ascending order
+
+nhanes_small %>%
+    arrange(education, age)
+
+# 6.12
+
+nhanes_small %>%
+     mutate(age = age * 12)
+
+nhanes_small %>%
+    mutate(logged_bmi = log(bmi))
 
 
+nhanes_small %>%
+    mutate(age = age * 12,
+           logged_bmi = log(bmi))
 
-
+nhanes_small %>%
+    mutate(old = if_else(age >= 30, "Yes", "No")) %>% view()
